@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer')
+require('dotenv').config()
 
 const sendVerificationEmail = (email, token) => {
   const transporter = nodemailer.createTransport({
@@ -8,10 +9,9 @@ const sendVerificationEmail = (email, token) => {
     secure: true,
     auth: {
       user: 'putrasatria.akun4@gmail.com',
-      pass: 'anhmwqlzkmwuazmi',
+      pass: process.env.CONFIG_PASS_EMAIL,
     },
   })
-
 
   const mailOptions = {
     from: 'putrasatria.akun4@gmail.com',

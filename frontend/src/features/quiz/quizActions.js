@@ -327,7 +327,7 @@ export const getQuizByTeacher = createAsyncThunk(
   'quiz/getQuizByTeacher',
   async ({ id }) => {
     try {
-      const res = await axios.get(QUIZ + '/student-quiz/' + id)
+      const res = await axios.get(QUIZ + 'student-quiz/' + id)
       return res.data
     } catch (err) {
       console.log(err)

@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:4444'
+const BASE_URL = import.meta.env.VITE_BASE_URL_BE
 
 const LOGIN = BASE_URL + '/auth/login'
 const REGISTER = BASE_URL + '/auth/register'

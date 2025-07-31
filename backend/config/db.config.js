@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
+require('dotenv').config()
 
-const db = 'mongodb://localhost:2111/logintes'
-// const db =
-//   'mongodb+srv://eduquiz:lnRCAWRU0xT6ydVx@cluster0.7bdauyc.mongodb.net/?retryWrites=true&w=majority'
+// const db = 'mongodb://localhost:2111/logintes'
+const db = process.env.MONGO_DB
 
 const mongooseConfig = async () => {
   try {

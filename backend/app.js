@@ -11,6 +11,11 @@ const studentAnswerRoutes = require('./routes/studentAnswer.route')
 app.use(express.json())
 
 app.use(cors())
+app.get('/', (_, res) => {
+  return res.json({
+    hi: 'hellooooo',
+  })
+})
 app.use('/auth', authRoutes)
 app.use('/users', userRoutes)
 app.use('/quiz', quizRoutes)
